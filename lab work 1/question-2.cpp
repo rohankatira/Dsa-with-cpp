@@ -1,3 +1,4 @@
+// swaping the value with the help of third value
 #include<iostream>
 using namespace std;
 
