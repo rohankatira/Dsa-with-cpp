@@ -28,6 +28,11 @@ int main()
     current ->next =NULL;
     head->next->next=current;
 
+    current =new node();
+    current ->data = 99;
+    current ->next = NULL;
+    head->next->next->next = current;
+
     while(ptr != NULL )
     {
        cout << ptr->data <<endl;
