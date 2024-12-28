@@ -28,8 +28,6 @@ int main()
     current ->next =NULL;
     head->next->next=current;
 
-    
-
     while(ptr != NULL )
     {
        cout << ptr->data <<endl;
