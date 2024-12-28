@@ -1,3 +1,5 @@
+// creating a node and travising them using while loop;
+
 #include<iostream>
 using namespace std;
 
@@ -9,9 +11,12 @@ class node
 };
 int main()
 {
+    node *ptr = NULL;  
     node *head = new node();
     head ->data=25;
     head ->next =NULL;
+
+    ptr = head;
 
     node *current = new node();
     current->data=98;
@@ -23,15 +28,13 @@ int main()
     current ->next =NULL;
     head->next->next=current;
 
-    current = new node ();
-    current ->data = 99;
-    current -> next =NULL;
-    head ->next->next->next = NULL ;
+    
 
-    cout << "head " << head->data <<",address: "<< head->next << endl;
-    cout << "n2:- " << current->data <<",address: "<< head->next << endl;
-    cout << "n3:- " << current->data <<",address: "<< head->next->next << endl;
-    cout << "n4:- " << current->data <<",address: "<< head->next->next->next << endl;
+    while(ptr != NULL )
+    {
+       cout << ptr->data <<endl;
+        ptr = ptr ->next;
+    }
 
     return 0;
 }
