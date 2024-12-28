@@ -22,5 +22,16 @@ int main()
     current -> data = 75;
     current ->next =NULL;
     head->next->next=current;
+
+    current = new node ();
+    current ->data = 99;
+    current -> next =NULL;
+    head ->next->next->next = NULL ;
+
+    cout << "head " << head->data <<",address: "<< head->next << endl;
+    cout << "n2:- " << current->data <<",address: "<< head->next << endl;
+    cout << "n3:- " << current->data <<",address: "<< head->next->next << endl;
+    cout << "n4:- " << current->data <<",address: "<< head->next->next->next << endl;
+
     return 0;
 }
