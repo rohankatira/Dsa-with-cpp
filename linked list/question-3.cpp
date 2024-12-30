@@ -32,7 +32,7 @@ class linkedlist
     {
 
     } 
-    void addAtposition(int data)
+    void addAtposition(int data, int position)
     {
 
     } 
