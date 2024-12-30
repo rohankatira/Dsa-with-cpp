@@ -1,4 +1,4 @@
-// creating a node and travising them using while loop;
+// creating singli link list a node and travising them using while loop;
 
 #include<iostream>
 using namespace std;
@@ -9,6 +9,7 @@ class node
     int data;
     node *next;  
 };
+
 int main()
 {
     node *ptr = NULL;  
@@ -28,10 +29,16 @@ int main()
     current ->next =NULL;
     head->next->next=current;
 
-    current =new node();
+    current = new node();
     current ->data = 99;
     current ->next = NULL;
     head->next->next->next = current;
+
+
+    current = new node();
+    current -> data = 06;
+    current -> next = NULL;
+    head->next->next->next->next = current;
 
     while(ptr != NULL )
     {
