@@ -26,7 +26,7 @@ class linkedlist
 
     void addAtbeggining(int data)
     {
-        
+        node *newnode = new node();
     } 
     void addAtEnding(int data)
     {
@@ -48,6 +48,7 @@ int main ()
         cout << "press 1 for insert a node at a beggining of the list "<< endl;
         cout << "press 2 for insert a node at a ending of the list "<< endl;
         cout << "press 3 for insert a node at a any position of the list "<< endl;
+        cout << "press 0  for exit"<< endl;
 
         cout << "Enter your choice";
         cin >> choice ;
@@ -72,6 +73,7 @@ int main ()
 
             list.addAtposition(element , position); 
                 break;
+                case 0:
             default: cout << "Enter valid choice..." << endl;
         }
     } while (choice!=0);
