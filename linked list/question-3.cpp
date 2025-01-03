@@ -11,6 +11,11 @@ class node
     public:
     int data;
     node * next;
+    node(int data)
+    {
+        this->data=data;
+        this->next=NULL;
+    }
 };
 
 class linkedlist
@@ -26,7 +31,10 @@ class linkedlist
 
     void addAtbeggining(int data)
     {
-        node *newnode = new node();
+        node *newnode = new node(data);
+        newnode->next = this->head;
+        this->head = newnode;
+        this-> count++;
     } 
     void addAtEnding(int data)
     {
@@ -59,7 +67,8 @@ int main ()
             cout << "Enter the value element";
             cin >> element; 
             list.addAtbeggining(element);
-                break;
+            cout << "Node inserted at beginning of the list sucessfully" <<endl;
+            break;
             case 2:
             cout << "Enter the value element";
             cin >> element;
@@ -72,8 +81,10 @@ int main ()
             cin >> position;
 
             list.addAtposition(element , position); 
-                break;
-                case 0:
+            break;
+            case 0:
+            cout<< "EXIT";
+            break;
             default: cout << "Enter valid choice..." << endl;
         }
     } while (choice!=0);
